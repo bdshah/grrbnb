@@ -1,0 +1,246 @@
+@import url('some google sans-serif font');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+html{
+    font-size: 20px;
+    line-height: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+main{
+    display: grid;
+    grid-template-areas: 
+        "A"
+        "B";
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+}
+
+header {
+    overflow: hidden;
+    grid-area: "A";
+    padding: 1rem 5rem 2rem 1rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/travel1.jpeg");
+/*    border-top: 2rem solid rgb(80, 80, 80);*/
+
+}
+form{
+    grid-area: "B";
+    display: grid;
+    grid-template-areas: 
+            "C"
+            "D"
+        "E"
+            "F"
+        "G"
+            "H";
+/*
+    display: flex;
+    flex-wrap: nowrap;
+*/
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+header > h1{
+    font-size: 3rem;
+/*    display: flex;*/
+    
+}
+.form-box{
+    margin:1rem;
+    display: inherit;
+}
+    .place{
+        grid-area: C;
+    }
+    .check-in{
+        grid-area: D;
+    }
+    .check-out{
+        grid-area: E;
+    }
+    .min{
+        grid-area: F;
+    }
+    .max{
+        grid-area: G;
+    }
+    button {
+    grid-area: H;
+    color: rgb(255 , 255 ,255);
+    background-color: rgb(236 , 5 ,5);
+    width: 5rem;
+}
+/*button {
+    color: rgb(255 , 255 ,255);
+    background-color: rgb(236 , 5 ,5);
+    width: 5rem;
+    padding: 0.5rem 2rem 0.5rem;
+}*/
+input{
+    display:block;
+/*    width: 20rem;*/
+    
+}
+label{
+    padding-right: 1rem;
+}
+
+input#min.price::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+input.price#max::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+
+img{
+    width: 30%;
+    height: auto;
+}
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 999px) {
+    h1.img {
+        width: 50%;
+        height: auto;
+        
+    }
+    main{
+    display: grid;
+    grid-template-areas: 
+        "A"
+        "B";
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+}
+
+header {
+    overflow: hidden;
+    grid-area: "A";
+    padding: 1rem 5rem 2rem 1rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/travel1.jpeg");
+/*    border-top: 2rem solid rgb(80, 80, 80);*/
+
+}
+form{
+    grid-area: "B";
+    display: grid;
+    grid-template-areas: 
+            "C C"
+            "D E"
+        "F G"
+            "H H";
+/*
+    display: flex;
+    flex-wrap: nowrap;
+*/
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+header > h1{
+    font-size: 3rem;
+/*    display: flex;*/
+    
+}
+.form-box{
+    margin:1rem;
+    display: inherit;
+}
+
+input{
+    display:block;
+/*    width: 20rem;*/
+    
+}
+label{
+    padding-right: 1rem;
+}
+
+input#min.price::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+input.price#max::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+
+img{
+    width: 30%;
+    height: auto;
+}
+
+   
+}
+
+@media (min-width:1000px){
+    main {
+        grid-template-areas: 
+            "A B";
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    form{
+    grid-area: "B";
+    display: grid;
+    grid-template-areas: 
+            "C C"
+            "D E"
+        "F G"
+            "H H";
+/*
+    display: flex;
+    flex-wrap: nowrap;
+*/
+    padding: 1rem 0rem 1rem 1rem;
+}
+input{
+    display:block;
+/*    width: 20rem;*/
+    
+}
+label{
+    padding-right: 1rem;
+}
+
+input#min.price::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+input.price#max::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+
+img{
+    width: 30%;
+    height: auto;
+}
+
+
+
+}
